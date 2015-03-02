@@ -1,0 +1,291 @@
+body, html {
+  margin: 0;
+  padding:0;
+}
+.wrapper { 
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+h5 {
+  margin-left: 5px;
+}
+.add_car input {
+    border-radius: 0;
+    cursor: pointer;
+}
+.add_car button {
+    margin-bottom: 10px;
+}
+.pointer {
+    cursor: pointer;
+}
+#key_in {
+    width: 2em;
+}
+#vin_in, #model_in, .long{
+    width: 12em;
+}
+.x-long{
+    width: 26em;
+}
+#year_in, #stock_in, .short {
+    width: 3em;
+}
+#miles_in, #engine_in{
+    width: 4em;
+}
+#paid_in, .medium-short {
+    width: 6em;
+}
+#make_in, #color_in, #drive_in, .medium {
+    width: 8em;
+}
+#trans_in, #date_in, .medium-long {
+    width: 10em;
+}
+.left_info {				/*vehicle info panels on admin/inventory/vehicle  */
+    border: black solid 1px;
+    width: 45%;
+    float: left;
+    margin-top: 5px;
+}
+.full_width {				/*vehicle info panels on admin/inventory/vehicle  */
+    border: black solid 1px;
+    float: center;
+    margin-top: 5px;
+}
+.right_info {				/*vehicle info panels on admin/inventory/vehicle  */
+    border: black solid 1px;
+    width: 45%;
+    float: right;
+    margin-top: 5px;
+}
+.table_heading th, .sold-title, .center, .btn-center {
+    text-align: center;
+}
+.sold-title h2 {
+  margin-top: -2px;
+}
+.pad {
+  padding: 10px;
+}
+.inline {
+    display: inline;
+}
+.input-label {
+    float: left;
+    width: 80px;
+    padding-top: 5px;
+    text-align: right;
+}
+.borderless {
+    border: none;
+}
+.address p {
+    margin: 0 5px;
+}
+.table-addr th {
+    background-color: #f5f5f5;
+    border-bottom: solid #dddddd 1px;
+}
+.table-addr td {
+    border-top: none;
+}
+.text-danger {
+    color: red;
+}
+.busy {
+    cursor: progress; 
+}
+.imageBox {
+    margin: 5px;
+    border: 1px solid black;
+    display: block;
+    float: left;
+    position: relative;
+    max-width: 47%;
+}
+.remove {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    z-index: 10;
+}
+.car-entry {
+    float: left;
+    width: 45%;
+    border: black solid;
+    border-radius: 5px;
+    margin: 5px;
+}
+.preview-photo {
+    display: block;
+    float: left;
+}
+.preview-text {
+    float: left;
+    display: block;
+    margin: 5px;
+    max-width: 45%;
+}
+.upper-case {
+    text-transform: uppercase;
+}
+.full-width {
+    width: 95%;
+    margin: 10px;
+}
+.age th {
+    width: 100px;
+}
+.inactive {
+    opacity: .3;
+}
+.active {
+    opacity: 1;
+}
+.invisible {
+    opacity: 0;
+}
+.error {
+    background-color: lightcoral;
+}
+.sm-margin {
+    margin: 3px;
+}
+
+.name-field {
+  float: left;
+  margin-left: 10px;
+}
+.negative-number, .loss {
+  color: #ff4444;
+}
+.totals {
+  float: left;
+  font-size: 1.2em;
+  min-width: 280px;
+}
+.totals strong {
+  font-size: 1.3em;
+}
+.totals th, .totals td {
+  border: none;
+}
+.car-info {
+  background-color: #ddd;
+  border: solid 1px #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: #333333 !important;
+  transition-duration: .5s;
+  
+}
+.car-info h1, .car-info h2, .car-info h3, .car-info h4, .car-info h5, .car-info h6, .car-info p {
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+.car-info:hover {
+  border: solid 1px blue;
+  
+}
+.car-info:active {
+}
+.car-info-required {
+  box-shadow: red 0 0 5px;
+}
+.car-info-empty:hover {
+}
+.car-info-empty:active {
+}
+required {
+  
+}
+.right {
+    float: right;
+}
+.odometer {
+  margin-left: 50px;
+}
+.notice {
+  color: #ee3333;
+}
+.toggle {
+  display: inline-block;
+}
+#address-edit {
+  border: solid;
+}
+#address-edit th, #address-edit td {
+  border: none;
+  padding: 2px;
+  background-color: #fff;
+}
+.record th {
+  border-top: solid 2px;
+}
+.btn-pos {
+  margin-right: 30px;
+}
+.sub-heading {
+  text-align: center;
+  margin: 3px;
+}
+.btn-center {
+  width: 20%;
+  margin-left: 40%;
+}
+.sortable {
+  font-size: .8em;
+  white-space: nowrap;
+  
+}
+.sortable tr, .sortable th, {
+  
+}
+.sortable img {
+  margin-bottom: .3em;
+  
+}
+.sortable th {
+  padding: 1em;
+  background: rgba(247,248,252,1);
+  background: -moz-linear-gradient(top, rgba(247,248,252,1) 0%, rgba(232,237,252,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,248,252,1)), color-stop(100%, rgba(232,237,252,1)));
+  background: -webkit-linear-gradient(top, rgba(247,248,252,1) 0%, rgba(232,237,252,1) 100%);
+  background: -o-linear-gradient(top, rgba(247,248,252,1) 0%, rgba(232,237,252,1) 100%);
+  background: -ms-linear-gradient(top, rgba(247,248,252,1) 0%, rgba(232,237,252,1) 100%);
+  background: linear-gradient(to bottom, rgba(247,248,252,1) 0%, rgba(232,237,252,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8fc', endColorstr='#e8edfc', GradientType=0 );
+}
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.footer ul {
+  margin: 0;
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  border-bottom: none;
+}
+.left-col {
+  float: left;
+  width: 49%;
+  border-right: dotted 1px grey;
+}
+.right-col {
+  float: right;
+  width: 49%;
+}
+.tight h1, .tight h2, .tight h3, .tight h4, .tight h5, .tight p, .tight button, .tight textarea {
+  margin: 5px;
+}
+.border {
+  border: solid black 1px;
+}
