@@ -1,0 +1,92 @@
+    <script type="text/x-handlebars" data-template-name="reports">
+      <h2>Click on a button to see report</h2>
+      {{#unless summary}}
+        <button type="button" {{action 'report' 'summary'}} class="btn btn-info">Monthly Summary</button>
+      {{else}}
+        <button type="button" class="btn btn-default">Monthly Summary</button>
+      {{/unless}}
+      {{#unless salesTax}}
+        <button type="button" {{action 'report' 'salesTax'}} class="btn btn-info">Sales Tax</button>
+      {{else}}
+        <button type="button" class="btn btn-default">Sales Tax</button>
+      {{/unless}}
+      {{#if summary}}
+        <h1>Monthly Summary</h1>
+        <h2>Summarized report</h2>
+        <h3>{{view 'month-year'}}</h3>
+        {{partial 'year-month-select'}}
+          <h3>Sold {{filteredCar.length}} vehicles<h3>
+          <h3>Total profit: ${{totalProfit}}</h3>
+          <h3>Average Profit Per Car ${{averageProfit}}</h3>
+          <table class="table table-striped table-hover pointer scroll-table">
+            <thead>
+              <tr>
+                <th>Date Sold</th>
+                <th>Stock#</th>
+                <th>Year</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Paid</th>
+                <th>Spent</th>
+                <th>Total Cost</th>
+                <th>Sale Price</th>
+                <th><strong>Profit</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each car in filteredCar}}
+                <tr {{action 'linkToCar' car}}>
+                  <td>{{car.niceDateSold}}</td>
+                  <td>{{car.stock}}</td>
+                  <td>{{car.year}}</td>
+                  <td>{{car.make}}</td>
+                  <td>{{car.vModel}}</td>
+                  <td>${{car.paid}}</td>
+                  <td>${{car.expenseTotal}}</td>
+                  <td>${{car.totalInvestment}}</td>
+                  <td>${{car.saleAmount}}</td>
+                  <td><strong>${{car.profit}}</strong></td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+      {{/if}}
+      {{#if salesTax}}
+        <h2>Sales Tax report</h2>
+        <h3>{{view 'month-year'}}</h3>
+        <h3>Total Sales Tax Collected: ${{totalTax}}</h3>
+          {{partial 'year-month-select'}}
+          <table class="table table-striped table-hover pointer scroll-table">
+            <thead>
+              <tr>
+                <th>Date Sold</th>
+                <th>Stock#</th>
+                <th>Year</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Sale Price</th>
+                <th>Trade Value</th>
+                <th>Trade Stock#</th>
+                <th>Subtotal</th>
+                <th>Sales Tax</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each car in filteredCar}}
+                <tr {{action 'linkToCar' car}}>
+                  <td>{{car.niceDateSold}}</td>
+                  <td>{{car.stock}}</td>
+                  <td>{{car.year}}</td>
+                  <td>{{car.make}}</td>
+                  <td>{{car.vModel}}</td>
+                  <td>{{car.saleAmount}}</td>
+                  <td>{{car.tradeInAllowance}}</td>
+                  <td>{{#if car.tradedInForId}}{{#link-to 'soldVehicle' car.tradedInForId}}#{{car.tradedInForStock}}{{/link-to}}{{else}}N/A{{/if}}</td>
+                  <td>{{car.subtotal}}</td>{{subtotal}}
+                  <td>{{car.salesTax}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+      {{/if}}
+    </script>
