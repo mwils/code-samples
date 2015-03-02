@@ -15,7 +15,6 @@ Dms.NavHideView = Ember.View.extend({
         opacity = 1 - ((scrollPos-startFade) / (endFade - startFade));
       }
       navBar.css('opacity', opacity);
-      console.log(navBar.css);
     });
   }
 });
