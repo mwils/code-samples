@@ -2,7 +2,7 @@
   $base_url = "/message_board";
   $siteTitle = "Sitting Spots";
   $slug = "Need a place to sit?";
-  $link = mysqli_connect('localhost', 'wormse6_messboar', 'se4DR%ft6', 'wormse6_oct2014mb');
+  $link = mysqli_connect('localhost', 'wormse6_messboar', '**pass**', 'wormse6_oct2014mb');
   if (!$link) {
     die('Could not connect: ' . mysql_error());
   }
